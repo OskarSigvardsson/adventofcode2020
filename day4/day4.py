@@ -1,6 +1,5 @@
 import re
 
-
 def parse(text):
     entries = [" ".join(f.split("\n")).strip() for f in text.split("\n\n")]
 
@@ -26,8 +25,10 @@ def valid1(passport):
 def valid_height(entry):
     if m := re.match(r"(\d+)cm$", entry):
         return 150 <= int(m.group(1)) <= 193
+
     elif m := re.match(r"(\d+)in$", entry):
         return 59 <= int(m.group(1)) <= 76
+
     else:
         return False
 
