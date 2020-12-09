@@ -27,7 +27,7 @@ def part2(numbers):
 
     for i in range(len(numbers) - 1):
         for j in range(i + 2, len(numbers)):
-            sublist = [numbers[i] for i in range(i, j)]
+            sublist = numbers[i:j]
 
             if target == sum(sublist):
                 return min(sublist) + max(sublist)
