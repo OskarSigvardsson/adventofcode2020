@@ -21,8 +21,8 @@ def part1(numbers):
 def part2(numbers):
     # I'm almost certain there's a MUCH faster algorithm for this, where you
     # have this sliding window you move over the list, but i just did this dumb
-    # one and it works fine (finishes in roughly a second, which isn't great,
-    # but isn't horrifying), so I'm sticking with it.
+    # one and it works fine (finishes in about 0.25 seconds), so I'm sticking
+    # with it.
     target = part1(numbers)
 
     for i in range(len(numbers) - 1):
