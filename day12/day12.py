@@ -18,6 +18,12 @@ with open("input.txt", "r") as f:
         instructions.append((c, v))
 
 def part1(instructions):
+    # I'm using complex numbers to represent position and heading. A complex
+    # number is like a 2-dimensional number, with a real part and an imaginary
+    # part (this would be the "east" and "north" parts of the ship's location).
+    # Moving forward is just adding the heading to the number, and rotating by
+    # 90 degrees is trivial in the imaginary plane: you just multiply the number
+    # by i. 
     dirs = {
         "E":  1 +  0j,
         "N":  0 +  1j,
